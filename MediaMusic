@@ -1,0 +1,30 @@
+
+class Media {
+  // Method to play media
+  void play() {
+    print('Playing media...');
+  }
+}
+
+class Song extends Media {
+  // Additional attribute for artist name
+  String artist;
+
+  // Constructor to initialize the artist name
+  Song(this.artist);
+
+  // Override the play() method to include the artist name
+  @override
+  void play() {
+    print('Playing song by $artist...');
+  }
+}
+void main() {
+  // Create an instance of Media
+  Media media = Media();
+  media.play(); // Call the play() method of Media
+
+  // Create an instance of Song with artist name
+  Song song = Song('Artist Name');
+  song.play(); // Call the play() method of Song
+}
